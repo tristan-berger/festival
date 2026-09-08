@@ -33,10 +33,34 @@
 /*Programme*/
 #page_programme {
   background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.line {
+    background-color: aquamarine;
+    padding: 0%;
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
 /*Contact*/
 #page_contact {
   background-color: brown;
+}
+
+
+
+
+/*--------< Elements >--------*/
+
+
+/*Artist*/
+.el_artist {
+  background-color: palevioletred;
+  padding: 5%;
 }

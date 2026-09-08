@@ -1,7 +1,23 @@
+import ElArtist from "../elements/artist"
+
 function PageProgramme() { return (
 
     <div id='page_programme' className="page">
-      Programme
+      <div className="line">
+        <ElArtist/>
+        <ElArtist/>
+        <ElArtist/>
+      </div>
+      <div className="line">
+        <ElArtist/>
+        <ElArtist/>
+        <ElArtist/>
+      </div>
+      <div className="line">
+        <ElArtist/>
+        <ElArtist/>
+        <ElArtist/>
+      </div>
     </div>
 
 )}
