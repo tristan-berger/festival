@@ -1,0 +1,42 @@
+
+/*Squelette du site*/
+#skeleton {
+  background-color: aqua;
+  flex : 1;
+  flex-direction: column;
+  display: flex;
+}
+
+
+/*Menu*/
+#menu{
+  background-color: gray;
+
+}
+
+
+
+/*--------< Pages >--------*/
+
+/*Page*/
+.page {
+  flex: 1;
+  color: black;
+}
+
+/*Home*/
+#page_home {
+  background-color: aliceblue;
+}
+
+
+/*Programme*/
+#page_programme {
+  background-color: blueviolet;
+}
+
+
+/*Contact*/
+#page_contact {
+  background-color: brown;
+}
