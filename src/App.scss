@@ -1,7 +1,6 @@
 
 /*Squelette du site*/
 #skeleton {
-  background-color: aqua;
   flex : 1;
   flex-direction: column;
   display: flex;
@@ -11,7 +10,6 @@
 /*Menu*/
 #menu{
   background-color: gray;
-
 }
 
 
@@ -22,11 +20,35 @@
 .page {
   flex: 1;
   color: black;
+  
 }
 
 /*Home*/
 #page_home {
-  background-color: aliceblue;
+  /*Flou*/
+  background: rgba(0, 0, 0, 0.5); 
+  video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+  h1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f1f1f1;
+    padding: 20px;
+    z-index: 10; 
+  }
+  section {
+    //position: fixed;
+    //position: relative;
+    //z-index: 1; 
+  }
 }
 
 
