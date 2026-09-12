@@ -8,10 +8,92 @@
 
 
 /*Menu*/
-#menu{
+#menu {
   background-color: gray;
-}
+  display: flex;
+  flex-direction: column;
 
+  nav {
+    display: none; // fermé par défaut
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+    margin: 2%;
+
+    &.open {
+      display: flex;
+    }
+
+    .link {
+      // 1. Reset des styles par défaut du navigateur sur <a>
+      text-decoration: none;
+      color: red;
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      padding: 0.5rem 0;
+      transition: all 0.3s ease;
+
+      // 2. Survol (Hover) & Focus (Accessibilité)
+      &:hover,
+      &:focus {
+        color: aqua;
+      }
+
+      // 3. Exemple : Animation d'un soulignement fluide au survol
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: aqua;
+        transition: all 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .menu-button {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+
+    .bar {
+      width: 28px;
+      height: 3px;
+      background-color: #333;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    &.open {
+      .bar {
+        &:nth-child(1) {
+          transform: translateY(9px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: translateY(-9px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
 
 
 /*--------< Pages >--------*/
@@ -58,7 +140,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 .line {
     background-color: aquamarine;
@@ -86,3 +167,9 @@
   background-color: palevioletred;
   padding: 5%;
 }
+
+
+
+
+
+
